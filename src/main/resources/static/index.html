@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BOW (Balance Of Wonderland) BOW</title>
+    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="/webjars/jquery/jquery.min.js"></script>
+    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+    <script src="/webjars/stomp-websocket/stomp.min.js"></script>
+    <script src="/scripts.js"></script>
+</head>
+<body>
+
+<div class="mace-flex-container">
+    <div class="mace-flex-auto-child">
+        <div class="mace-default-height">
+            <div class="main-container p-1 mb-2" style="margin-top: 50px">
+
+
+                <div class="row" style="margin-top: 10px">
+                    <div class="col-md-12" style="padding-left: 20%;">
+                        <form class="form-inline">
+
+                            <div class="container">
+                                <div class="row">
+
+                                    <div class="form-group col-md-10 col-6">
+
+                                        <div class="form-group col-md-3">
+                                            <label for="message">Message</label>
+                                        </div>
+
+                                        <div class="form-group col-md-6">
+                                            <input type="text" id="message" class="form-control"
+                                                   placeholder="Enter your message here...">
+                                        </div>
+
+                                        <button id="send" class="btn btn-default"
+                                                style="border-bottom-width: medium;"
+                                                type="button">
+                                            Send
+                                        </button>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 10px">
+                    <div class="col-md-12" style="padding-left: 20%;padding-right: revert">
+                        <form class="form-inline">
+                            <div class="container">
+                                <div class="row">
+
+                                    <div class="form-group col-md-10 col-6">
+
+                                        <div class="form-group col-md-1">
+                                            <label for="private-message">Private Message</label>
+                                        </div>
+                                        <div class="form-group col-md-3">
+                                            <input type="text" id="private-message" class="form-control"
+                                                   placeholder="Enter your message here...">
+                                        </div>
+
+                                        <div class="form-group col-md-1">
+                                            <label for="userId">User Id</label>
+                                        </div>
+
+                                        <div class="form-group col-md-3">
+                                            <input type="text" id="userId" class="form-control"
+                                                   placeholder="Enter user id here...">
+                                        </div>
+
+                                        <button id="send-private" class="btn btn-default"
+                                                style="border-bottom-width: medium;"
+                                                type="button">Send Private
+                                            Message
+                                        </button>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <perfect-scrollbar [config]="scrollConfig" class="slimScroll">
+                    <div class="main-container p-1 mb-2" style="padding-left: 5%;padding-right: 5%;padding-block: 3%;">
+
+                        <br><br><br>
+
+                        <div class="row" style="background-color: mintcream">
+                            <div class="col-md-12">
+                                <table id="message-history" class="table table-striped">
+                                    <thead>
+                                    <tr>
+                                        <th> Messages
+                                            <span
+                                                    id="notifications"
+                                                    style="
+                                    color: white;
+                                    background-color: crimson;
+                                    padding-left: 25px;
+                                    padding-right: 25px;">
+                            </span>
+                                        </th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+
+                                    <tr>
+                                        <th> Messages <br><span id="messages"></span></th>
+                                        <th> messages-key-change <br><span id="messages-key-change"></span></th>
+                                        <th> messages-key-event<br><span id="messages-key-event"></span></th>
+                                    </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </perfect-scrollbar>
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
